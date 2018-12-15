@@ -2,11 +2,12 @@
 
 <html>
 	<head>
-		<title>Nan Xiao - Projects</title>
+		<title>Nan Xiao - Publications</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/png" href="images/Favicon.png">
-		<link rel="stylesheet" href="css/main.min.css" />
+		<link rel="stylesheet" href="css/main.min.css"/>
+		<link rel="stylesheet" href="css/simpleLightbox.min.css"/>
 	</head>
 	<body>
 
@@ -40,7 +41,7 @@
 
 							<h2>Publication</h2>
 							<p>
-							<b><span class="image left" style="width:14em;"><img src="images/image_about.jpg"  alt=""></b>
+							<span class="image left" style="width:14em;"><img src="images/image_about.jpg"  alt=""/></span>
 							<b>Computational Design of Transforming Pop-up Books</b>
 							<i><br/>ACM Transactions on Graphics, Vol. 37, No.1, 2018, Article No. 8. Presented at SIGGRAPH 2018</i>
 							<span><br/>Nan Xiao, Zhe Zhu, Ralph Martin, Kun Xu, Jia-Ming Lu and Shi-Min Hu </span>
@@ -55,7 +56,7 @@
 								<div class="align-center">
 			                    	<video src="files/a08-xiao_fastforward_20180619.mov" controls="" width="800px"></video>
 			                    </div>
-			                </br>
+			                <br/>
 			                </p>
 			                
 
@@ -77,9 +78,6 @@
 	numpages = {14},
 	url = {http://doi.acm.org/10.1145/3156934},
 	doi = {10.1145/3156934},
-	acmid = {3156934},
-	publisher = {ACM},
-	address = {New York, NY, USA},
 	keywords = {Paper art, mechanism design, pop-up, transforming pop-up},
 	} 
 								</code></pre>
@@ -95,7 +93,7 @@
 						<ul class="actions fit">
 							<li><a href="#" class="button disabled">	&larr; Previous Section</a></li>
 							<li><a href="index.html#two" class="button fit">Back to Home</a></li>
-							<li><a href="computational.html" class="button fit"  alt="Comprehending Data" >Next Section &rarr;</a></li>
+							<li><a href="computational.html" class="button fit">Next Section &rarr;</a></li>
 						</ul>
 						</div>
 					</section>
@@ -105,7 +103,7 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>Copyright © 2018 Cloudia, All Rights Reserved.</li><li> Last update date: 2018.11.29</li>
+						<li>Copyright © 2018 Cloudia, All Rights Reserved.</li><li> Last update date: 2018.12.12</li>
 					</ul>
 				</div>
 			</footer>
@@ -117,7 +115,11 @@
 			<script src="js/browser.min.js"></script>
 			<script src="js/breakpoints.min.js"></script>
 			<script src="js/main.min.js"></script>
+			<script src="js/simpleLightbox.min.js"></script>
 
+			<script>
+			$('.col-3 .gallery').simpleLightbox();
+			</script>
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50869958-2"></script>
 			<script>
 			  window.dataLayer = window.dataLayer || [];

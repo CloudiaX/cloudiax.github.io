@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Nan Xiao - Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="images/Favicon.png">
+		<link rel="stylesheet" href="css/main.min.css" />
+		<link rel="stylesheet" href="css/simpleLightbox.min.css"/>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Nan Xiao</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="transforming.html">Transforming Pop-ups</a></li>
+						<li><a href="computational.html" class="active">Computational Design</a></li>
+						<li><a href="comprehending.html">Comprehending Data</a></li>
+						<li><a href="nui.html">NUI</a></li>
+						<li><a href="art.html">Art &amp; Design</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Computational Design and Fabrication</h1>
+							
+							<p class="thin">Inspired by the previous research of pop-ups from the Graphics and Geometric Computing Group at Tsinghua University, I proposed the idea of the computational design of transforming pop-ups and was advised by Professor Shi-min Hu and Professor Kun Xu. I was drawn towards the interesting nature of this problem and its potential for yielding new knowledge. Starting from scratch, I spent a month studying the principles behind it, and then analyzed the geometric properties used in transforming pop-ups. Based on this investigation, a novel mathematical model was built by integrating knowledge from mechanical engineering and geometry. I led the project team that developed the first computational design tool to help novice users create transforming pop-ups.</br></p>
+							
+
+							<h3>Question Posing</h3>
+							<p class="thin"><span class="image right" style="width:22em;"><img src="images/img01.JPG"  alt=""/></span>Not only children but also adults love transforming pop-up books because of its surprising and playful mechanisms. To find out how to build the structure of it, we analyzed the mechanisms used in “Transformers: The Ultimate Pop-up Universe” and defined several properties of transforming pop-up:</br>
+							<ul style="clear:both;">
+								<li>Every structure consists of a pull-tab, a ground patch, and several basic 4R linkage mechanisms.</li>
+								<li>Every structure has only one DoF, which guarantees it could transform into a specified shape.</li>
+								<li>The structure is foldable at both initial state and ending state of transformation.</li>
+								<li>No collisions during the transformation process.</li>
+							</ul></p>
+							
+							<p class="thin">After listing above properties, we posed the question that is how to automatically generate a structure that has above properties and can transform between two patterns and shapes.
+							</p>
+
+
+
+							<h3>Question Decomposition</h3>
+							<p class="thin">
+							
+							The question could be decomposed into several sub-questions, which helps us to solve it step by step.							
+							 <br/>
+							</p> 
+
+							<p>1. Which kind of mechanisms can be used in transforming pop-up structures?</p>
+							<p class="thin">There are three basic mechanisms based on the 4R linkages could be used in the structures: parallel mechanism, V-fold mechanism, and slide mechanism. There are also three kinds of functional elements: extended patch, ground patch and pull-tab.</p> 
+
+							<p>2. How could we build a structure using these mechanisms?</p>
+							<p class="thin">Three types of linkages, including hinge linkage, extended patch linkage, and slide linkage, are used in transforming pop-up structure to transmit movement from one mechanism to another, and the link relations can be naturally described as a tree structure.</p>
+
+							<p>3. How could we ensure the structure only has one DoF and without collisions?</p>
+							<p class="thin">The number of DoF can be proved by using Kutzbach-Gruebler Equation, and the proof details could be found in the supplemental material of our paper. We use a hard constraint to ensure the mechanisms remain collision-free when generating the structure.</p>
+
+							<p>4. How could we measure the change of pattern textures?</p>
+							<p class="thin">We observe that pattern texture could change due to face flipping or covering, so we introduce the flip term to measure that all regions change into target pattern.</p>
+
+							<p>5. How could we measure the change of shape?</p>
+							<p class="thin">The movements of mechanisms provide the shape change, so we introduce shape term to accounts for how well the pop-up in the untransformed and transformed states match the shapes of the user given source and target patterns.</p>
+
+
+
+
+ 
+
+
+ 
+
+
+
+							<h3 style="clear:both;">Proposing Solutions</h3>
+							<p class="thin">
+							<span class="image fit" style="padding-right:3em;"><img src="images/img02.PNG" alt="" /></span>
+							By answering these sub-questions, it is much more clear that what kind of methods can be used in the solution. Our overall algorithm has four steps: an optimization step, a patch refinement step, a texture painting step, and a blueprint generation step. Details could be found in Section 4 in <a style="text-decoration: underline;" href="transforming.html" target="_blank">our paper</a>.
+ 							
+							 </p>  
+
+
+
+
+ 							<h3 style="clear:both;">Results</h3>
+							<p class="thin">
+							Some results are given here. We also gave the evaluation which could be found in Section 5 in <a style="text-decoration: underline;" href="transforming.html" target="_blank">our paper</a>.	
+
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-3">
+												<span class="image fit gallery"  href="images/result_000.PNG">
+													<img src="images/r000.jpg" alt="" />
+													<span class="img-overlay"></span>
+													<span class="img-text"></span>
+												</span>
+											</div>
+											<div class="col-3">
+												<span class="image fit gallery" href="images/result_001.PNG">
+													<img src="images/r001.jpg" alt="" />
+													<span class="img-overlay"></span>
+													<span class="img-text"></span>
+												</span>
+											</div>
+											<div class="col-3">
+												<span class="image fit gallery" href="images/result_002.PNG">
+													<img src="images/r002.jpg" alt="" />
+													<span class="img-overlay"></span>
+													<span class="img-text"></span>
+												</span>
+											</div>
+											<div class="col-3">
+												<span class="image fit gallery" href="images/result_003.PNG">
+													<img src="images/r003.jpg" alt="" />
+													<span class="img-overlay"></span>
+													<span class="img-text"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+							
+ 							
+							 </p>  
+
+							
+							
+						</div>
+				</section>
+
+					<section id="main" class="wrapper">
+						<div class="inner">
+						<ul class="actions fit">
+							<li><a href="transforming.html" class="button fit">	&larr; Previous Section</a></li>
+							<li><a href="index.html#two" class="button fit">Back to Home</a></li>
+							<li><a href="comprehending.html" class="button fit">Next Section &rarr;</a></li>
+						</ul>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Copyright © 2018 Cloudia, All Rights Reserved.</li><li> Last update date: 2018.12.12</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/main.min.js"></script>
+			<script src="js/simpleLightbox.min.js"></script>
+
+			<script>
+			$('.gallery').simpleLightbox();
+			</script>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50869958-2"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'UA-50869958-2');
+			</script>
+	</body>
+</html>

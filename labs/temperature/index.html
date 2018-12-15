@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<!-- Copyright XiaoNan 2013-10-13 -->
+<html lang="us">
+	<head>
+	<meta charset="utf-8">
+	<title>XiaoNan's Temperature Convertor Lab</title>
+	<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+    <script src="js/myjs.js"></script>
+	<style>
+body {
+	font: 62.5% "Trebuchet MS", sans-serif;
+	margin: 50px;
+}
+.demoHeaders {
+	margin-top: 2em;
+}
+.ui-state-focus {
+	outline: none;
+}
+#celsius:hover{ cursor:pointer;}
+#kelvin:hover{ cursor:pointer;}
+#fahrenheit:hover{ cursor:pointer;}
+#rankine:hover{ cursor:pointer;}
+#delisle:hover{ cursor:pointer;}
+#newton:hover{ cursor:pointer;}
+#celsius {
+	width: 120px;
+	height: 117px;
+	float: left;
+	color: #208000;
+	background: url(css/ui-lightness/images/celsius.png) no-repeat top;
+	font-size: 30px;
+	margin-top: -25px;
+	margin-bottom: 0px;
+	padding-top:50px;
+	padding-right:20px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+#kelvin {
+	width: 120px;
+	height: 117px;
+	float: left;
+	color: #208000;
+	background: url(css/ui-lightness/images/kelvin.png) no-repeat top;
+	font-size: 30px;
+	margin-top: -25px;
+	margin-bottom: 0px;
+	padding-top:50px;
+	padding-right:20px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+#fahrenheit {
+	width: 120px;
+	height: 120px;
+	clear: left;
+	float: left;
+	color: #208000;
+	background: url(css/ui-lightness/images/fahrenheit.png) no-repeat top;
+	font-size: 30px;
+	margin-top: -25px;
+	margin-bottom: 0px;
+	padding-top:50px;
+	padding-right:20px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+#rankine {
+	width: 120px;
+	height: 120px;
+	float: left;
+	color: #208000;
+	background: url(css/ui-lightness/images/rankine.png) no-repeat top;
+	font-size: 30px;
+	margin-top: -25px;
+	margin-bottom: 0px;
+	padding-top:50px;
+	padding-right:20px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+#delisle {
+	width: 120px;
+	height: 80px;
+	clear: left;
+	float: left;
+	color: #208000;
+	background: url(css/ui-lightness/images/delisle.png) no-repeat top;
+	font-size: 30px;
+	margin-top: -25px;
+	margin-bottom: 0px;
+	padding-top:50px;
+	padding-right:20px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+#newton {
+	width: 120px;
+	height: 80px;
+	float: left;
+	color: #208000;
+	background: url(css/ui-lightness/images/newton.png) no-repeat top;
+	font-size: 30px;
+	margin-top: -25px;
+	margin-bottom: 0px;
+	padding-top:50px;
+	padding-right:20px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+
+
+#celsius2 {
+	width: 348px;
+	height: 52px;
+	color: #208000;
+	background:url(css/ui-lightness/images/c2.png) no-repeat;
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-right:20px;padding-top:23px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;	margin-left:auto; 
+	margin-right:auto;
+}
+#kelvin2 {
+	width: 348px;
+	height: 43px;
+	color: #208000;
+	background:url(css/ui-lightness/images/k2.png) no-repeat;
+	font-size: 16px;
+	margin-top: -23px;
+	margin-bottom: 0px;
+	padding-right:20px;padding-top:12px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;	margin-left:auto; 
+	margin-right:auto;
+}
+#fahrenheit2 {
+	width: 348px;
+	height: 43px;
+	color: #208000;
+	background:url(css/ui-lightness/images/f2.png) no-repeat;
+	font-size: 16px;
+	margin-top: -12px;
+	margin-bottom: 0px;
+	padding-right:20px;padding-top:12px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;	margin-left:auto; 
+	margin-right:auto;
+}
+#rankine2 {
+	width: 348px;
+	height: 45px;
+	color: #208000;
+	background:url(css/ui-lightness/images/r2.png) no-repeat;
+	font-size: 16px;
+	margin-top: -12px;
+	margin-bottom: 0px;
+	padding-right:20px;padding-top:12px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;	margin-left:auto; 
+	margin-right:auto;
+}
+#delisle2 {
+	width: 348px;
+	height: 43px;
+	color: #208000;
+	background:url(css/ui-lightness/images/de2.png) no-repeat;
+	font-size: 16px;
+	margin-top: -12px;
+	margin-bottom: 0px;
+	padding-right:20px;padding-top:12px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;	margin-left:auto; 
+	margin-right:auto;
+}
+#newton2 {
+	width: 348px;
+	height: 45px;
+	color: #208000;
+	background:url(css/ui-lightness/images/n2.png) no-repeat;
+	font-size: 16px;
+	margin-top: -12px;
+	margin-bottom: 0px;
+	padding-right:20px;padding-top:12px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;	margin-left:auto; 
+	margin-right:auto;
+}
+
+
+
+.ui-widget-content {
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+
+.cal1hidden
+{
+	width:720px;height:100%;text-align:center;margin-left:0;margin-right:auto;
+	filter:alpha(opacity=0); -moz-opacity:0; opacity:0;
+}
+.cal1show
+{
+	width:720px;height:100%;text-align:center;margin-left:auto;margin-right:auto;
+}
+.cal2hidden
+{
+	width:720px;height:100%;text-align:center;margin-left:auto;margin-right:0;margin-top:-480px;
+	filter:alpha(opacity=0); -moz-opacity:0; opacity:0;
+}
+.cal2show
+{
+	width:720px;height:100%;text-align:center;margin-left:auto;margin-right:auto;
+}
+#switchCal1:hover{ cursor:pointer;}
+#switchCal2:hover{ cursor:pointer;}
+
+#inputNum
+{
+	float:left;
+	height:38px;
+	width:221px;
+	margin-top:20px;
+	margin-left:50px;
+	background:url(css/ui-lightness/images/inputbg.png) no-repeat;
+	border:none;
+	padding-left:10px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+	font-size:16px;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+a:focus,input:focus,select:focus{ 
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+	border:none;
+	outline:none; 
+}
+select:hover
+{
+	cursor:pointer;
+}
+#selectNum
+{
+	float:left;
+	height:38px;
+	width:43px;
+	margin-top:20px;
+	margin-left:-10px;
+	background:url(css/ui-lightness/images/selectbg.png) no-repeat left;
+	border:none;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+	text-align:center;
+	padding-left:5px;
+	font-size:16px;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+option
+{
+	height:34px;
+	width:43px;
+	background: url(css/ui-lightness/images/drop.png) no-repeat;
+	margin-left:-15px;
+	filter:alpha(opacity=90); -moz-opacity:0.9; opacity:0.9;
+}
+
+</style>
+	</head>
+
+	<body style="overflow-x:hidden;overflow-y:hidden;TEXT-ALIGN:center; background:url(css/ui-lightness/images/colorbg.png) repeat -200px -200px ">
+<!-- Slider -->
+<div id="tbg" style="position:absolute;width:100%;height:100%;background:#57cc00;filter:alpha(opacity=40); -moz-opacity:0.4; opacity:0.4;z-index:-5;left:0px;top:0px;"></div>
+<h1 style="color:#FFF;margin-bottom:50px;padding-left:-200px;">Temperature Convertor</h1>
+<div class="cal1show">
+      <div id="sliderTC" style="float:left;height:380px;width:150px;margin-left:70px;margin-top:20px;"></div>
+      <div style="float:left;height:300px;width:350px;margin-left:80px;margin-top:25px">
+    	<div id="celsius">22</div>
+    	<div id="kelvin">22</div>
+    	<div id="fahrenheit">22</div>
+    	<div id="rankine">22</div>
+    	<div id="delisle">22</div>
+    	<div id="newton">22</div>
+      </div>
+      <div style="clear:both;"></div>
+      <div id="switchCal2" style="color:#FFF;margin-top:50px;z-index:5;height:30px; font-size:14px; width:250px;margin-left:auto;margin-right:auto; font-family:Verdana, Geneva, sans-serif;">Precise Calculator ▶</div>   
+</div>
+
+<div class="cal2hidden" style="display:none;">
+	  <div style="margin-left:auto; margin-right:auto;width:350px;height:auto;">
+	  <input id="inputNum"></input>
+      <select id="selectNum">
+      	<option value="1">°C</option> 
+		<option valeu="2">°K</option> 
+		<option value="3">°F</option> 
+		<option value="4">°R</option>
+        <option value="5">°De</option> 
+        <option value="6">°N</option>  
+      </select>
+      </div>
+      <div style="clear:both;;height:300px;width:350px;margin-left:auto; margin-right:auto;margin-top:25px">
+    	<div id="celsius2"> </div>
+    	<div id="kelvin2"> </div>
+    	<div id="fahrenheit2"> </div>
+    	<div id="rankine2"> </div>
+    	<div id="delisle2"> </div>
+    	<div id="newton2"> </div>
+      </div>
+      <div style="clear:both;"></div>
+      <div id="switchCal1" style="color:#FFF;margin-top:50px;z-index:5;height:30px; font-size:14px; width:250px;margin-left:auto;margin-right:auto;font-family:Verdana, Geneva, sans-serif;">◀ Rough Calculation</div>   
+</div>
+
+
+</body>
+</html>
